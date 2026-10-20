@@ -1,59 +1,135 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# SuaraWarga — Sistem Pengaduan Masyarakat Berbasis Web
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+SuaraWarga adalah aplikasi berbasis web yang dibangun menggunakan framework Laravel untuk membantu masyarakat menyampaikan pengaduan terkait permasalahan di lingkungan sekitar. Aplikasi ini dilengkapi dengan fitur pengelolaan pengaduan dan klasifikasi kategori pengaduan menggunakan metode **Naive Bayes**.
 
-## About Laravel
+## Fitur Utama
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- **Autentikasi pengguna:** registrasi dan login.
+- **Pengaduan masyarakat:** pengguna dapat membuat dan melihat daftar pengaduannya.
+- **Klasifikasi otomatis:** sistem menentukan kategori pengaduan menggunakan metode Naive Bayes berdasarkan data latih yang tersedia.
+- **Manajemen pengaduan:** admin dapat melihat pengaduan dan memperbarui statusnya.
+- **Manajemen data latih:** admin dapat menambah, melihat, mengubah, dan menghapus data latih untuk klasifikasi.
+- **Dashboard:** menampilkan ringkasan informasi pengaduan.
+- **Informasi layanan:** menyediakan halaman layanan dan cara kerja sistem.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Teknologi yang Digunakan
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- PHP
+- Laravel
+- MySQL
+- Blade
+- Tailwind CSS
+- JavaScript
+- Vite
+- Composer
+- Node.js dan NPM
 
-## Learning Laravel
+## Metode Klasifikasi
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+SuaraWarga menggunakan metode **Naive Bayes** untuk mengklasifikasikan teks pengaduan berdasarkan data latih yang tersimpan di database.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Proses klasifikasi secara umum meliputi:
+1. Menerima judul dan isi pengaduan.
+2. Mengolah teks menjadi kumpulan kata.
+3. Menghitung probabilitas kategori berdasarkan data latih.
+4. Menentukan kategori dengan nilai probabilitas tertinggi.
 
-## Laravel Sponsors
+Hasil klasifikasi bergantung pada kualitas dan jumlah data latih yang tersedia.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## Persyaratan Sistem
 
-### Premium Partners
+Pastikan perangkat sudah memiliki:
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+- PHP yang sesuai dengan persyaratan versi Laravel pada proyek.
+- Composer.
+- MySQL atau MariaDB.
+- Node.js dan NPM.
+- Git.
 
-## Contributing
+## Cara Instalasi
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 1. Clone repositori
 
-## Code of Conduct
+```bash
+git clone https://github.com/nizam-za/SuaraWarga.git
+cd SuaraWarga
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### 2. Instal dependensi PHP
 
-## Security Vulnerabilities
+```bash
+composer install
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### 3. Siapkan file konfigurasi
 
-## License
+```bash
+copy .env.example .env
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### 4. Buat database
+
+Buat database MySQL bernama `suarawarga` melalui phpMyAdmin atau MySQL.
+
+Sesuaikan konfigurasi database pada file `.env`:
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=suarawarga
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+Sesuaikan nama database, username, dan password dengan konfigurasi MySQL pada perangkat masing-masing.
+
+### 5. Buat application key
+
+```bash
+php artisan key:generate
+```
+
+### 6. Jalankan migrasi database
+
+```bash
+php artisan migrate --seed
+```
+
+Seeder digunakan untuk mengisi data awal yang telah disediakan oleh proyek. Akun admin atau akun pengguna harus disiapkan sesuai mekanisme yang tersedia dalam aplikasi.
+
+### 7. Instal dependensi frontend
+
+```bash
+npm install
+```
+
+### 8. Bangun aset frontend
+
+```bash
+npm run build
+```
+
+### 9. Jalankan aplikasi
+
+```bash
+php artisan serve
+```
+
+Buka alamat berikut di browser:
+
+`http://127.0.0.1:8000`
+
+## Repository
+
+Kode sumber SuaraWarga tersedia di GitHub:
+
+https://github.com/nizam-za/SuaraWarga
+
+## Tujuan Pengembangan
+
+Proyek ini dikembangkan sebagai penerapan framework Laravel dalam pembangunan aplikasi web, pengelolaan database MySQL, implementasi operasi CRUD, serta penerapan metode klasifikasi teks Naive Bayes.
+
+## Catatan
+
+SuaraWarga merupakan proyek pengembangan sistem informasi pengaduan masyarakat. Untuk menjalankan aplikasi di lingkungan baru, pengguna perlu menyesuaikan konfigurasi database dan memastikan data awal serta akun yang dibutuhkan telah tersedia.
