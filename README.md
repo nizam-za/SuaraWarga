@@ -135,4 +135,39 @@ Proyek ini dikembangkan sebagai penerapan framework Laravel dalam pembangunan ap
 SuaraWarga merupakan proyek pengembangan sistem informasi pengaduan masyarakat. Untuk menjalankan aplikasi di lingkungan baru, pengguna perlu menyesuaikan konfigurasi database dan memastikan data awal serta akun yang dibutuhkan telah tersedia.
 
 
-## OKE
+## PENILAIAN
+
+## A. Ketentuan Tugas
+1. Setiap kelompok mengerjakan satu proyek sesuai judul yang dipilih.
+2. Aplikasi dibuat menggunakan Laravel dan MySQL.
+3. Setiap kelompok menerapkan metode sesuai judul proyek.
+4. Setiap mahasiswa wajib berkontribusi di GitHub menggunakan akun masing-masing.
+5. Setiap kelompok mempresentasikan hasil proyek.
+
+## B. Checklist Tugas
+
+- [ ✅ ] Membuat aplikasi Laravel sesuai judul.
+- [ ✅ ] Membuat database dan fitur CRUD.
+- [ ✅ ] Menerapkan metode sesuai judul.
+- [ ✅ ] Mengunggah source code ke GitHub.
+- [ ❌ ] Setiap anggota melakukan commit sesuai tugasnya.
+- [ ✅ ] Membuat laporan singkat dengan README.md
+- [ ✅ ] Melakukan presentasi dan demo aplikasi.
+
+## C. Ketentuan GitHub
+- Satu repository untuk setiap kelompok.
+- Semua anggota bergabung sebagai collaborator.
+- Setiap anggota wajib memiliki kontribusi yang dapat diperiksa.
+- Cantumkan link repository pada laporan.
+
+## D. Penilaian
+
+| Komponen | Bobot |
+|---|---:|
+| Aplikasi Laravel | 40% |
+| Penerapan metode | 20% |
+| Kontribusi GitHub | 20% |
+| Laporan dan presentasi | 20% |
+| **Total** | **100%** |
+
+**Catatan:** Fokus penilaian adalah aplikasi yang berjalan, metode yang diterapkan, dan kerja sama setiap anggota kelompok.
