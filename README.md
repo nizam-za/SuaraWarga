@@ -133,3 +133,6 @@ Proyek ini dikembangkan sebagai penerapan framework Laravel dalam pembangunan ap
 ## Catatan
 
 SuaraWarga merupakan proyek pengembangan sistem informasi pengaduan masyarakat. Untuk menjalankan aplikasi di lingkungan baru, pengguna perlu menyesuaikan konfigurasi database dan memastikan data awal serta akun yang dibutuhkan telah tersedia.
+
+
+## OKE
