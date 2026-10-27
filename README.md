@@ -150,7 +150,7 @@ SuaraWarga merupakan proyek pengembangan sistem informasi pengaduan masyarakat. 
 - [ ✅ ] Membuat database dan fitur CRUD.
 - [ ✅ ] Menerapkan metode sesuai judul.
 - [ ✅ ] Mengunggah source code ke GitHub.
-- [ ❌ ] Setiap anggota melakukan commit sesuai tugasnya.
+- [ ✅ ] Setiap anggota melakukan commit sesuai tugasnya.
 - [ ✅ ] Membuat laporan singkat dengan README.md
 - [ ✅ ] Melakukan presentasi dan demo aplikasi.
 
